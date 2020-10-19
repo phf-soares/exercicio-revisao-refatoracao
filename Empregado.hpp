@@ -5,24 +5,22 @@
 #include <string>
 
 class Empregado {
-	
-  public:
-    double salarioHora;  
-    double quotaMensalVendas;  
 
+	public:
+    Empregado(std::string nome, double salarioHora);
 
-    double pagamentoMes(double horasTrabalhadas) {
- 
-      double t = horasTrabalhadas;
-	  
-	  //Cálculo de hora extra (+50% se horasTrabalhadas > 8)
-      if (horasTrabalhadas > 8) {
-        double x = horasTrabalhadas - 8;
-        t += x / 2;
-      }
-	  return t * salarioHora;
-    }
-	
+    double pagamentoMes(double horasTrabalhadas);
+
+    void setNome(std::string n);
+    void setSalarioHora(double s); 
+
+    std::string getNome() const;
+    double getSalarioHora() const;    
+
+  protected:
+    std::string _nome;
+    double _salarioHora;
+
 };
 
 #endif
