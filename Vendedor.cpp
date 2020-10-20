@@ -1,7 +1,7 @@
 #include "Vendedor.hpp"
 
 Vendedor::Vendedor(std::string nome, double salarioHora, double quotaMensalVendas):
-     Empregado(nome, salarioHora), _quotaMensalVendas(quotaMensalVendas) {}
+ Empregado(nome, salarioHora), _quotaMensalVendas(quotaMensalVendas) {}
 
 void Vendedor::setQuotaMensalVendas(double q) {
   _quotaMensalVendas = q;
